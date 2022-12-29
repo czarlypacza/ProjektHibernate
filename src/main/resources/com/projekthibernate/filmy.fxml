@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="965.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projekthibernate.Controllers.FilmyController">
+   <children>
+      <MenuBar stylesheets="@../../../../../../../Lab8/ProjektHibernate/src/main/resources/com/projekthibernate/style.css">
+         <menus>
+            <Menu mnemonicParsing="false" styleClass="Menu" text="Film">
+               <items>
+                  <MenuItem fx:id="dodajFILM" mnemonicParsing="false" onAction="#dodajFILM" text="dodaj film" />
+                  <MenuItem fx:id="usunfilm" mnemonicParsing="false" text="usun film" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem fx:id="powrot" mnemonicParsing="false" onAction="#Powrot" text="powrot" />
+                  <MenuItem fx:id="refresh" mnemonicParsing="false" onAction="#refresh" text="odswiez" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <AnchorPane prefHeight="664.0" prefWidth="965.0" stylesheets="@../../../../../../../Lab8/ProjektHibernate/src/main/resources/com/projekthibernate/style.css">
+         <children>
+            <Region prefHeight="93.0" prefWidth="965.0" />
+            <TableView fx:id="tabelafilmy" editable="true" layoutX="44.0" layoutY="100.0" prefHeight="519.0" prefWidth="899.0" styleClass="repertuar" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="22.0">
+               <columns>
+                  <TableColumn fx:id="ID" maxWidth="49.0" prefWidth="49.0" styleClass="kolumna" text="ID" />
+                  <TableColumn fx:id="Tytulfilmu" maxWidth="379.0" prefWidth="379.0" styleClass="kolumna" text="Tytuł filmu" />
+                  <TableColumn fx:id="Rezyser" maxWidth="317.0" minWidth="0.0" prefWidth="317.0" styleClass="kolumna" text="Reżyser" />
+                  <TableColumn fx:id="czastrwania" maxWidth="96.0" prefWidth="96.0" styleClass="kolumna" text="Czas trwania" />
+                  <TableColumn fx:id="ocena" maxWidth="80.0" styleClass="kolumna" text="Ocena" />
+               </columns>
+            </TableView>
+            <Label layoutX="91.0" layoutY="8.0" prefHeight="77.0" prefWidth="164.0" styleClass="napis" text="Filmy">
+               <font>
+                  <Font name="Calibri" size="67.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../../../../Lab8/ProjektHibernate/src/main/resources/com/projekthibernate/style.css" />
+      <URL value="@style.css" />
+   </stylesheets>
+</VBox>

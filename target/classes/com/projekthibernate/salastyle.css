@@ -1,0 +1,82 @@
+AnchorPane{
+    -fx-background-color:#595959;
+}
+
+
+Region{
+    -fx-background-color:#212A38;
+}
+
+MenuBar{
+    -fx-background-color:#1f2633;
+}
+
+.menu .label{
+    -fx-text-fill: #B3B3B3;
+}
+.menu .menu-item{
+    -fx-background-color:#1f2633;
+    -fx-border-color:#1f2633;
+    -fx-text-fill: #B3B3B3;
+    -fx-padding:0px;
+}
+.menu .menu-item:hover {
+    -fx-background-color: darkgray;
+}
+.menu-item .label:hover {
+    -fx-text-fill: black;
+}
+.napis{
+    -fx-text-fill: #B3B3B3;
+}
+
+#przycisk{
+    -fx-background-color: #273c5e;
+    -fx-text-fill: #B3B3B3;
+    -fx-border-color: #3c5c8f;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+#przycisk:hover{
+    -fx-background-color: #373c5e;
+    -fx-text-fill: #C3C3C3;
+    -fx-border-color: #3c5c81;
+}
+#przycisk:armed{
+    -fx-background-color: #3C3F6e;
+    -fx-text-fill: #C3C3C3;
+    -fx-border-color: #5c4c91;
+}
+
+
+.tabelamiejsca{
+    -fx-background-color:#595959;
+    -fx-border-color:#595959;
+    -fx-text-fill:white;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: #595959;
+
+}
+.table-view .column-header{
+    -fx-background-color: #595959;
+
+}
+.table-view .column-header:hover{
+    -fx-background-color: #797979;
+
+}
+
+.tabelamiejsca.TableColumn{
+    -fx-background-color:#565656;
+    -fx-border-color:#fff;
+    -fx-border-width: 10;
+    -fx-text-fill:white;
+}
+.tabelamiejsca.table-cell{
+    -fx-background-color:#565656;
+    -fx-border-color:#fff;
+    -fx-border-width: 2;
+    -fx-text-fill:white;
+}

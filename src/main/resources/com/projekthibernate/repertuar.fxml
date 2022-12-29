@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="790.0" prefWidth="1144.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projekthibernate.Controllers.RezerwzacjaController">
+   <children>
+      <MenuBar stylesheets="@style.css">
+        <menus>
+          <Menu mnemonicParsing="false" styleClass="Menu" text="Film">
+            <items>
+              <MenuItem fx:id="dodajFILM" mnemonicParsing="false" onAction="#dodajFILM" text="dodaj film" />
+                  <MenuItem fx:id="filmy" mnemonicParsing="false" onAction="#FILMY" text="filmy" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Sala">
+               <items>
+                  <MenuItem fx:id="dodajsale" mnemonicParsing="false" text="dodaj sale" />
+                  <MenuItem fx:id="usunsale" mnemonicParsing="false" text="usun sale" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Pracownicy">
+               <items>
+                  <MenuItem fx:id="dodajpracownika" mnemonicParsing="false" text="dodaj pracownika" />
+                  <MenuItem fx:id="usunpracownika" mnemonicParsing="false" text="usun pracownika" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem fx:id="refresh" mnemonicParsing="false" onAction="#refresh" text="odswiez" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane prefHeight="790.0" prefWidth="1144.0" stylesheets="@style.css">
+         <children>
+            <Region prefHeight="93.0" prefWidth="1144.0" />
+            <Label layoutX="70.0" layoutY="18.0" prefHeight="33.0" prefWidth="251.0" styleClass="napis" text="KINO Sokół">
+               <font>
+                  <Font name="Arial Bold" size="27.0" />
+               </font>
+            </Label>
+            <ImageView blendMode="DARKEN" fitHeight="60.0" fitWidth="56.0" layoutX="14.0" layoutY="4.0">
+               <image>
+                  <Image url="@../../Images/kino.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="342.0" layoutY="19.0" styleClass="napis" text="Repertuar">
+               <font>
+                  <Font size="43.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dzienseansu" layoutX="938.0" layoutY="39.0" prefHeight="25.0" prefWidth="170.0" promptText="dzien seansu" style="-fx-background-color: #212A38; -fx-color: #213468;" />
+            <TableView fx:id="tabelaseanse" layoutX="36.0" layoutY="93.0" prefHeight="636.0" prefWidth="1091.0" styleClass="repertuar" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.0">
+              <columns>
+                <TableColumn fx:id="Tytulfilmu" maxWidth="201.0" prefWidth="201.0" styleClass="kolumna" text="Tytuł filmu" />
+                <TableColumn fx:id="czastrwania" maxWidth="76.0" prefWidth="76.0" styleClass="kolumna" text="Czas trwania" />
+                  <TableColumn fx:id="ocena" maxWidth="58.0" prefWidth="49.0" style="-fx-background-color: #565656;" text="Ocena" />
+                  <TableColumn fx:id="przedpoludniem" maxWidth="265.0" prefWidth="265.0" styleClass="kolumna" text="Przed południem" />
+                  <TableColumn fx:id="popoludniu" maxWidth="265.0" prefWidth="265.0" styleClass="kolumna" text="Po południem" />
+                  <TableColumn fx:id="wieczorem" maxWidth="232.0" prefWidth="232.0" styleClass="kolumna" text="Wieczorem" />
+              </columns>
+            </TableView>
+            <Button fx:id="nowosci" layoutX="615.0" layoutY="39.0" mnemonicParsing="false" style="-fx-background-color: #273c5e; -fx-text-fill: #B3B3B3; -fx-border-color: #3c5c8f;" styleClass="przycisk" text="Nowości" />
+            <Button fx:id="bestsellery" layoutX="699.0" layoutY="39.0" mnemonicParsing="false" styleClass="przycisk" text="Bestsellery" />
+            <Button fx:id="najlepiejoceniane" layoutX="788.0" layoutY="39.0" mnemonicParsing="false" styleClass="przycisk" text="Najlepiej oceniane" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
