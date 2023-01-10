@@ -19,6 +19,11 @@ public class RepertuarEntry {
         this.godziny = godziny;
     }
 
+    @Override
+    public String toString() {
+        return "" + Tytul + '\'';
+    }
+
     public int getID_Filmu() {
         return ID_Filmu;
     }

@@ -62,13 +62,20 @@ public class RezerwzacjaController implements Initializable {
     @FXML
     private MenuItem filmy;
     @FXML
+    private MenuItem seanse;
+    @FXML
     private MenuItem usunpracownika;
     @FXML
     private MenuItem usunsale;
+    @FXML
+    private MenuItem dodajgodzine;
+
 
     RepertuarEntryDao repertuarEntryDao = new RepertuarEntryDao();
 
     ObservableList<RepertuarEntry> listaRepertuarFilmy = FXCollections.observableArrayList();
+
+
 
 
     @Override
@@ -97,38 +104,6 @@ public class RezerwzacjaController implements Initializable {
             }
 
             tabelaseanse.setItems(listaRepertuarFilmy);
-            /*
-            resultSet= dostep.selectRepertuarinfo(dzienseansu.getValue().toString());
-            while (resultSet.next()){
-                ArrayList<LocalTime> godziny= new ArrayList<LocalTime>();
-                setgodzin = dostep.selectGodziny(resultSet.getInt("ID_seansu"));
-                while (setgodzin.next()){
-
-                    godziny.add( setgodzin.getTime("godzina").toLocalTime());
-                }
-
-                listaRepertuarFilmy.add(new RepertuarEntry(resultSet.getInt("ID_seansu"),
-                        resultSet.getString("Tytul"),
-                        resultSet.getInt("Czas_trwania"),
-                        resultSet.getInt("Ocena"),
-                        godziny));
-                tabelaseanse.setItems(listaRepertuarFilmy);
-
-
-
-                resultSet = dostep.odswiez("seanse");
-            while (resultSet.next()){
-                ListaSeanse.add(new Seans(resultSet.getInt("ID_seansu"),
-                        resultSet.getInt("ID_filmu"),
-                        resultSet.getObject("dzien",LocalDate.class)));
-            }
-            resultSet = dostep.odswiez("sala");
-            while (resultSet.next()){
-                ListaSal.add(new Sala(resultSet.getInt("ID_sali"),
-                        resultSet.getInt("ilosc_rzedow"),
-                        resultSet.getInt("ilosc_miejsc")));
-            }
-            }*/
 
         }
 
@@ -160,14 +135,7 @@ public class RezerwzacjaController implements Initializable {
                             setText(null);
                         } else {
                             HBox hBox = createHBox( item,"12:00:00","00:00:00");
-                            /*for (int i = 0; i < hBox.getChildren().size(); i++) {
-                                hBox.getChildren().get(0).setOnMouseClicked(new EventHandler<MouseEvent>() {
-                                    @Override
-                                    public void handle(MouseEvent mouseEvent) {
 
-                                    }
-                                });
-                            }*/
                             setGraphic(hBox);
                             setText(null);
                         }
@@ -239,19 +207,6 @@ public class RezerwzacjaController implements Initializable {
 
 
     }
-    @FXML
-    protected void dodajFILM(){
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(Rezerwacja.class.getResource("dodajfilm.fxml"));
-            Scene scene = new Scene(fxmlLoader.load());
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.initStyle(StageStyle.UTILITY);
-            stage.show();//forlularz po kliknieciu w menu
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     @FXML
     protected void FILMY(){
@@ -265,6 +220,31 @@ public class RezerwzacjaController implements Initializable {
             e.printStackTrace();
         }
     }
+    @FXML
+    protected void seanse(){
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(Rezerwacja.class.getResource("seanse.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = (Stage) seanse.getParentPopup().getOwnerWindow();
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    protected void dodajGodzine(){
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(Rezerwacja.class.getResource("dodajgodzineseansu.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = (Stage) dodajgodzine.getParentPopup().getOwnerWindow();
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public static final LocalDate LOCAL_DATE (String dateString){
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");

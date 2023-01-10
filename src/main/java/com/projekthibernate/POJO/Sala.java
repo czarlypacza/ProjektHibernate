@@ -9,17 +9,17 @@ public class Sala {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer ID_sali;
     Integer rzedy;
-    Integer miejsca;
+    Integer kolumny;
 
     public Sala(Integer ID_sali, Integer rzedy, Integer miejsca) {
         this.ID_sali = ID_sali;
         this.rzedy = rzedy;
-        this.miejsca = miejsca;
+        this.kolumny = miejsca;
     }
 
     public Sala(Integer rzedy, Integer miejsca) {
         this.rzedy = rzedy;
-        this.miejsca = miejsca;
+        this.kolumny = miejsca;
     }
 
     public Sala() {
@@ -41,11 +41,11 @@ public class Sala {
         this.rzedy = rzedy;
     }
 
-    public Integer getMiejsca() {
-        return miejsca;
+    public Integer getKolumny() {
+        return kolumny;
     }
 
-    public void setMiejsca(Integer miejsca) {
-        this.miejsca = miejsca;
+    public void setKolumny(Integer kolumny) {
+        this.kolumny = kolumny;
     }
 }

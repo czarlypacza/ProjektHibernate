@@ -14,7 +14,6 @@
 
 <AnchorPane prefHeight="790.0" prefWidth="1144.0" stylesheets="@salastyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projekthibernate.Controllers.SalaController">
    <children>
-      <Region layoutX="853.0" layoutY="27.0" prefHeight="763.0" prefWidth="291.0" />
       <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="1144.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
@@ -51,11 +50,12 @@
             <TableColumn prefWidth="45.0" style="-fx-background-color: white;" text="R13" />
         </columns>
       </TableView>
+      <Region layoutX="853.0" layoutY="27.0" prefHeight="763.0" prefWidth="291.0" styleClass="region" stylesheets="@salastyle.css" />
       <Line endX="100.0" layoutX="426.0" layoutY="44.0" startX="-100.0" />
       <Line endX="-483.5" endY="-126.5" layoutX="809.0" layoutY="171.0" startX="-483.5" startY="-143.0" />
       <Line endX="-107.5" endY="-16.0" layoutX="634.0" layoutY="44.0" startX="-107.5" startY="-0.5" />
       <Label layoutX="412.0" layoutY="27.0" styleClass="napis" text="Ekran" />
-      <Label layoutX="867.0" layoutY="95.0" styleClass="napis" text="Wybrane miejsca:">
+      <Label layoutX="867.0" layoutY="95.0" styleClass="napis" text="Wybrane kolumny:">
          <font>
             <Font name="Arial" size="27.0" />
          </font>

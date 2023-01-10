@@ -35,6 +35,7 @@ MenuBar{
 	-fx-background-color:#565656;
 	-fx-border-color:#A2A2A2;
 	-fx-text-fill:white;
+	-fx-font-size: 15px;
 	/*-fx-table-cell-border-color: -fx-box-border;*/
 }
 
@@ -44,7 +45,7 @@ MenuBar{
 	-fx-text-fill:white;
 }
 
-.table-cell{
+table-cell{
 	-fx-border-color: transparent -fx-box-border transparent transparent;
 }
 
@@ -73,4 +74,49 @@ MenuBar{
 	-fx-background-color: #3C3F6e;
 	-fx-text-fill: #C3C3C3;
 	-fx-border-color: #5c4c91;
+}
+
+#del-button{
+	-fx-background-color: #273c5e;
+	-fx-text-fill: #B3B3B3;
+	-fx-border-color: #3c5c8f;
+	-fx-border-radius: 6;
+	-fx-background-radius: 6;
+}
+#del-button:hover{
+	-fx-background-color: #373c5e;
+	-fx-text-fill: #C3C3C3;
+	-fx-border-color: #3c5c81;
+}
+#del-button:armed{
+	-fx-background-color: #3C3F6e;
+	-fx-text-fill: #C3C3C3;
+	-fx-border-color: #5c4c91;
+}
+#del-button .ikonli-font-icon{
+	-fx-icon-code: "far-trash-alt";
+	-fx-icon-color: white;
+	-fx-icon-size: 16px;
+}
+#edit-button{
+	-fx-background-color: #273c5e;
+	-fx-text-fill: #B3B3B3;
+	-fx-border-color: #3c5c8f;
+	-fx-border-radius: 6;
+	-fx-background-radius: 6;
+}
+#edit-button:hover{
+	-fx-background-color: #373c5e;
+	-fx-text-fill: #C3C3C3;
+	-fx-border-color: #3c5c81;
+}
+#edit-button:armed{
+	-fx-background-color: #3C3F6e;
+	-fx-text-fill: #C3C3C3;
+	-fx-border-color: #5c4c91;
+}
+#edit-button .ikonli-font-icon{
+	-fx-icon-code: "far-save";
+	-fx-icon-color: white;
+	-fx-icon-size: 16px;
 }

@@ -10,7 +10,7 @@ public class Seans {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int ID_seansu;
 
-    @ManyToOne(targetEntity = Film.class)
+    @ManyToOne(targetEntity = Film.class,fetch = FetchType.EAGER)
     @JoinColumn(name = "ID_filmu")
     Film ID_filmu;
 

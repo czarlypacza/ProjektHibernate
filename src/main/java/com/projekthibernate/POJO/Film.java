@@ -4,13 +4,18 @@ import javax.persistence.*;
 
 @Entity
 public class Film {
+
     @Id
     @Column(name = "ID_filmu")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int ID_filmu;
+
     int Czas_trwania;
+
     int Ocena;
+
     String Tytul;
+
     String rezyser;
 
     public Film(int ID_filmu, int czas_trwania, int ocena, String tytul, String rezyser) {

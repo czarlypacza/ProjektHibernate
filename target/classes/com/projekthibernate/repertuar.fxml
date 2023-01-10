@@ -11,10 +11,20 @@
         <menus>
           <Menu mnemonicParsing="false" styleClass="Menu" text="Film">
             <items>
-              <MenuItem fx:id="dodajFILM" mnemonicParsing="false" onAction="#dodajFILM" text="dodaj film" />
                   <MenuItem fx:id="filmy" mnemonicParsing="false" onAction="#FILMY" text="filmy" />
             </items>
           </Menu>
+            <Menu mnemonicParsing="false" text="Seans">
+               <items>
+                  <MenuItem fx:id="seanse" mnemonicParsing="false" onAction="#seanse" text="seans" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Godzina seansu">
+               <items>
+                  <MenuItem fx:id="dodajgodzine" mnemonicParsing="false" onAction="#dodajGodzine" text="dodaj godzinę seansu" />
+                  <MenuItem fx:id="usunpracownika11" mnemonicParsing="false" text="usun godzinę seansu" />
+               </items>
+            </Menu>
             <Menu mnemonicParsing="false" text="Sala">
                <items>
                   <MenuItem fx:id="dodajsale" mnemonicParsing="false" text="dodaj sale" />
@@ -29,7 +39,6 @@
             </Menu>
           <Menu mnemonicParsing="false" text="Help">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" />
               <MenuItem fx:id="refresh" mnemonicParsing="false" onAction="#refresh" text="odswiez" />
             </items>
           </Menu>

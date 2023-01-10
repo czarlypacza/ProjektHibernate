@@ -15,15 +15,18 @@ public class Repertuar {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer ID;
 
-    //@Id
+
     @ManyToOne(targetEntity = Seans.class)
     @JoinColumn(name = "ID_seansu")
     Integer ID_seansu;
-    //@Id
+
     @ManyToOne(targetEntity = Sala.class)
     @JoinColumn(name = "ID_sali")
     Integer ID_sali;
     LocalTime godzina;
+
+    /*@Column(name = "zajete")
+    String zajete;*/
 
     public Repertuar(int ID_seansu, int ID_sali, LocalTime godzina) {
         this.ID_seansu = ID_seansu;

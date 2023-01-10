@@ -27,4 +27,5 @@ public class RepertuarEntryDao {
         return result.getID_sali();
     }/*Potrzebne do funkcjonalnosci przechodzenia do sali*/
 
+
 }
