@@ -120,8 +120,13 @@ public class FilmyController implements Initializable {
         Rezyser.setCellValueFactory(new PropertyValueFactory<>("rezyser"));
         czastrwania.setCellValueFactory(new PropertyValueFactory<>("Czas_trwania"));
         ocena.setCellValueFactory(new PropertyValueFactory<>("Ocena"));
+
+
         Callback<TableColumn<Film, Integer>, TableCell<Film, Integer>> IntegerCellFactory
                 = TextFieldTableCell.forTableColumn(new IntegerStringConverter());
+
+
+
         czastrwania.setCellFactory(col -> {
             TableCell<Film, Integer> cell = IntegerCellFactory.call(col);
             cell.setAlignment(Pos.CENTER_LEFT);
@@ -146,8 +151,14 @@ public class FilmyController implements Initializable {
                         t.getTablePosition().getRow())).setOcena(t.getNewValue());
             }
         });
+
+
+
         Callback<TableColumn<Film, String>, TableCell<Film, String>> StringCellFactory
                 = TextFieldTableCell.forTableColumn();
+
+
+
         Tytulfilmu.setCellFactory(col -> {
             TableCell<Film, String> cell = StringCellFactory.call(col);
             cell.setAlignment(Pos.CENTER_LEFT);
@@ -200,6 +211,8 @@ public class FilmyController implements Initializable {
 
             }
         });
+
+
         edit.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
         edit.setCellFactory(param-> new TableCell<Film,Film>(){
             private final Button editButton = new Button("edit");

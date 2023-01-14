@@ -2,7 +2,6 @@ AnchorPane{
     -fx-background-color:#595959;
 }
 
-
 Region{
     -fx-background-color:#212A38;
 }
@@ -49,34 +48,59 @@ MenuBar{
 }
 
 
-.tabelamiejsca{
-    -fx-background-color:#595959;
-    -fx-border-color:#595959;
-    -fx-text-fill:white;
+#siedzenie{
+    -fx-background-color: transparent;
+
+}
+
+#kolumna_numery{
+    -fx-alignment: CENTER-RIGHT;
+    -fx-background-color:#595959 ;
+    -fx-border-color: #595959;
+}
+
+#kolumna_numery.table-cell{
+    -fx-background-color: #595959;
+    -fx-text-fill: white;
+
+}
+
+#kolumna_numery.column-header-background .label{
+    -fx-alignment: CENTER-RIGHT;
+}
+
+#cell{
+    -fx-background-color: #595959;
+    -fx-border-color: #595959;
+    -fx-padding: 0px;
+
+}
+
+.table-view{
+    -fx-background-color: #595959;
+    -fx-border-color: #595959;
 }
 
 .table-view .column-header-background{
     -fx-background-color: #595959;
-
-}
-.table-view .column-header{
-    -fx-background-color: #595959;
-
-}
-.table-view .column-header:hover{
-    -fx-background-color: #797979;
-
 }
 
-.tabelamiejsca.TableColumn{
-    -fx-background-color:#565656;
-    -fx-border-color:#fff;
-    -fx-border-width: 10;
-    -fx-text-fill:white;
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
 }
-.tabelamiejsca.table-cell{
-    -fx-background-color:#565656;
-    -fx-border-color:#fff;
-    -fx-border-width: 2;
-    -fx-text-fill:white;
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+
+
+
+
+.table-view *.scroll-bar:vertical *.increment-button,
+.table-view *.scroll-bar:vertical *.decrement-button,
+.table-view *.scroll-bar:vertical *.increment-arrow,
+.table-view *.scroll-bar:vertical *.decrement-arrow {
+    -fx-background-color: red;
 }

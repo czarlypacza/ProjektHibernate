@@ -1,0 +1,103 @@
+--sala--
+
+            //miejsca.getColumns().get(i).setCellValueFactory(param -> new SimpleObjectProperty(siedzenie));
+            //int finalI = i;
+            //miejsca.getColumns().get(i).setCellValueFactory(param -> new ReadOnlyObjectWrapper(new Button(""+finalI)));
+            //miejsca.getColumns().get(i).setCellValueFactory(param -> new SimpleObjectProperty(new Siedzenie(""+finalI)));
+            //System.out.println(miejsca.getColumns().get(0).getCellObservableValue(rzedy.get(0)));
+            //System.out.println(miejsca.getColumns().get(i).getCellData(rzedy.get(i)));
+            /*((Button)miejsca.getColumns().get(i).getCellObservableValue(rzedy.get(0)).getValue()).setOnMouseClicked(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent mouseEvent) {
+                    System.out.println("aaaaaaaa");
+                }
+            });*/
+
+
+            /* javafx.util.Callback<TableColumn<Row, Row>, TableCell<Row, Row>> cellFactorysiedzenie = new javafx.util.Callback<>() {
+
+            @Override
+            public TableCell<Row, Row> call(TableColumn<Row, Row> rowTableColumn) {
+                TableCell<Row, Row> cell = new TableCell<>() {
+
+                    @Override
+                    public void updateItem(Row item, boolean empty) {
+                        super.updateItem(item, empty);
+
+                        if (empty) {
+                            setGraphic(null);
+                            setText(null);
+                        } else {
+                            setGraphic(new Button());
+
+                        }
+                    }
+
+                };
+                return cell;
+            }
+
+        };*/
+
+
+        /*for (int i = 1; i <= sala.getRzedy(); i++) {
+
+            //miejsca.getColumns().get(i).setCellValueFactory(param -> new ReadOnlyObjectWrapper<>());
+            //miejsca.getColumns().get(i).setCellFactory(cellFactorysiedzenie);
+            //miejsca.getColumns().get(i).setCellValueFactory(new SimpleBooleanProperty());
+
+
+            miejsca.getColumns().get(i).setCellFactory(param-> new TableCell<Row, Boolean>(){
+                private final Button deleteButton = new Button();
+
+
+                @Override
+                protected void updateItem(Boolean item, boolean empty) {
+                    super.updateItem(item, empty);
+
+
+                    deleteButton.setGraphic(new Button("aaa"));
+                    if (item==null){
+                        setGraphic(null);
+                        return;
+                    }
+                    setGraphic(deleteButton);
+                    deleteButton.setOnAction(actionEvent -> {
+                    });
+
+                }
+            });
+        }*/
+
+
+
+
+
+        /*for (int i = 1; i <= sala.getKolumny(); i++) {
+
+            *//*miejsca.getColumns().get(i).getCellObservableValue(i).getValue();
+            System.out.println(miejsca.getColumns().get(i).getCellObservableValue(i).getValue().toString());
+            for (int j = 1; j < sala.getRzedy(); j++) {
+                System.out.println( miejsca.getColumns().get(i).getCellObservableValue(j).getValue());
+            }*//*
+
+            ((Button) miejsca.getColumns().get(1).getCellObservableValue(1).getValue()).setText("aaaaa");
+            System.out.println(((Button) miejsca.getColumns().get(i).getCellObservableValue(i).getValue()).getText());
+
+        }*/
+
+
+
+
+.tabelamiejsca.TableColumn{
+    -fx-background-color:#565656;
+    -fx-border-color:#fff;
+    -fx-border-width: 10;
+    -fx-text-fill:white;
+}
+.tabelamiejsca.table-cell{
+    -fx-background-color:#565656;
+    -fx-border-color:#fff;
+    -fx-border-width: 2;
+    -fx-text-fill:white;
+}

@@ -14,6 +14,8 @@ public class SalaDao {
         return query.getResultList();
     }
 
+
+
     public Sala getSala(int id){
         TypedQuery query = DBAcess.getEntityManager().createQuery("from Sala s where s.ID_sali = ?1",Sala.class);
         query.setParameter(1,id);
